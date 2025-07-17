@@ -340,9 +340,9 @@ const View3D = () =>
 
 const view3d = View3D();
 let modelData = 'Armchair'
-let modelColors = getColorList()
-let modelDiameter = getProfileDiameter()
-let modelFlat = getProfileFlat()
+let modelColors = view3d.getColorList()
+let modelDiameter = view3d.getProfileDiameter()
+let modelFlat = view3d.getProfileFlat()
 
 
 
@@ -381,7 +381,7 @@ document.querySelectorAll( '.js-flat input' ).forEach( input =>
 			document.querySelector('.js-radius').style.display = 'grid'
 			document.querySelector('.js-size').style.display = 'none'
 		}
-		modelFlat = getProfileFlat()
+		modelFlat = view3d.getProfileFlat()
 	}
 } );
 
@@ -391,7 +391,7 @@ document.querySelectorAll( '.js-radius input' ).forEach( input =>
 {
 	input.onchange = () => {
 		view3d.setProfileDiameter( input.value );
-		modelDiameter = getProfileDiameter()
+		modelDiameter = view3d.getProfileDiameter()
 	}
 } );
 
