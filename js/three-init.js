@@ -424,7 +424,7 @@ document.querySelectorAll( '.grid-colors' )?.forEach( ( grid, index ) =>
 	{
 		// В index.html добавил цвет по умолчанию в каждую палитру цветов ( .color.active )
 		view3d.setColorByIndex( index, active.style.backgroundColor );
-		modelColors = getColorList()
+		modelColors = view3d.getColorList()
 	}
 } );
 
