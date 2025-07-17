@@ -356,14 +356,17 @@ view3d.addEventListener( 'load', ( event ) =>
 
 document.querySelectorAll( 'button[data-model]' ).forEach( element => 
 {
-	element.onclick = () => view3d.showModel( element.dataset.model );
+	element.onclick = () => {
+		view3d.showModel( element.dataset.model );
+		modelData = element.innerHTML
+		console.log(modelData)
+	}
 
 	if( element.classList.contains( 'active' ) )
 	{
 		// показываем модель связанную с активной вкладкой!
 		view3d.showModel( element.dataset.model );
-		modelData = element.innerHTML
-		console.log(modelData)
+
 	}
 } );
 
